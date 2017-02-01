@@ -23,9 +23,9 @@ public class Crawl {
 					continue;
 				result.add(link.attr("abs:href")); 
 			} 
-			//		for (String link : result) { 
-			//			System.out.println(link); 
-			//		}
+			for (String link : result) { 
+				System.out.println(link); 
+			}
 		}
 		catch(Exception e) {
 			System.out.println("ENCOUNTERED 404!!!!");

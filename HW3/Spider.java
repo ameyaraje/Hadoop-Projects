@@ -8,7 +8,7 @@ public class Spider {
 	public HashMap<String, String> search(String url) throws Exception{
 		HashMap<String, String> map = new HashMap<>();
 
-		while (this.pagesVisited.size() < noOfPages) {
+		while (Spider.pagesVisited.size() < noOfPages) {
 			Crawl crawler = new Crawl();
 			System.out.println("New Crawler created");
 			
@@ -26,9 +26,9 @@ public class Spider {
 			crawler.extractLinks(currentURL);
 			this.pagesToVisit.addAll(crawler.getLinks());
 			
-			for (String s: pagesVisited) {
-				System.out.println(s);
-			}
+//			for (String s: pagesVisited) {
+//				System.out.println(s);
+//			}
 		}
 		return map;
 	}
